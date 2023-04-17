@@ -2,7 +2,12 @@
 <html lang="ja">
 <head>
   <title>Maximum 2023 年齢あてゲーム テスト</title>
-  <script defer>
+</head>
+<body>
+  <h1>年齢あてゲーム</h1>
+  <p>二分探索という手法を用いて、7回以内にあなたの年齢を当てます。ただし、0歳から100歳まで対応しています。</p>
+  <p>Yesなら「OK」、Noなら「キャンセル」を押してください。</p>
+  <script>
     let left = 0, right = 101, cnt = 0;
     while (right - left > 1) {
       cnt++;
@@ -11,10 +16,5 @@
     }
     window.alert(`あなたは ${left} 歳です！ ${cnt} 回質問しました！`)
   </script>
-</head>
-<body>
-  <h1>年齢あてゲーム</h1>
-  <p>二分探索という手法を用いて、7回以内にあなたの年齢を当てます。ただし、0歳から100歳まで対応しています。</p>
-  <p>Yesなら「OK」、Noなら「キャンセル」を押してください。</p>
 </body>
 </html>
