@@ -12,7 +12,12 @@
     while (right - left > 1) {
       cnt++;
       const mid = Math.floor((left + right) / 2);
-      (window.confirm(`${cnt} 回目の質問: あなたは ${mid} 歳以上ですか？`) ? left : right) = mid;
+      if (window.confirm(`${cnt} 回目の質問: あなたは ${mid} 歳以上ですか？`)) {
+        left = mid;
+      }
+      else {
+        right = mid;
+      }
     }
     window.alert(`あなたは ${left} 歳です！ ${cnt} 回質問しました！`)
   </script>
