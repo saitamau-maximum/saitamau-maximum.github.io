@@ -27,7 +27,7 @@ const schema = z.object({
         }),
       { required_error: "tagsは必須です" }
     )
-    .length(1, { message: "1つ以上入力してください" }),
+    .min(1, { message: "タグは1つ以上入力してください" }),
   author: z
     .string({ required_error: "authorは必須です" })
     .min(1, { message: "authorは必須です" })
